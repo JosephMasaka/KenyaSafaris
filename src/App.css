@@ -6,7 +6,10 @@
 }
 
 body{
-
+ color: #000;
+ overflow-x: hidden;
+ scroll-behavior: smooth;
+ scroll-snap-align: center;
 }
 
 .flex{
@@ -24,6 +27,13 @@ body{
 .container{
   width: 90%;
   margin: auto;
+}
+
+.color-secondary{
+  background-color: rgb(255, 165, 0);
+  width: 4px;
+  height: 35px;
+  margin-right: 40px;
 }
 
 /** Navbar **/
@@ -66,3 +76,102 @@ body{
 #Navbar .container{
   align-items: center;
 } 
+
+/** Sidebar **/
+#Sidebar{
+  transition: all cubic-bezier(0.95, 0.05, 0.795, 0.035) .5s;
+}
+
+.sidebar{
+  position: fixed;
+  width: 400px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  z-index: 100;
+}
+
+.sidebar-open{
+  transform: translateX(-450px);
+}
+
+.sidebar-closed{
+  transform: translateX(450px);
+}
+
+.close-span{
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.close-span-1{
+  transform: rotate(45deg);
+}
+
+.close-span-2{
+  transform: rotate(-45deg);
+}
+
+/** Showcase **/
+#showArea{
+  width: 100vw;
+  height: 100vh;
+}
+
+.custom-slide{
+  height: 100vh;
+  width: 100vw;
+}
+
+video{
+  width: 100%;
+}
+
+.carousel-status, .control-dots, .thumbs-wrapper{
+  display: none !important;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: rgba(0,0,0,0) !important;
+}
+
+.carousel .control-prev.control-arrow:before, .carousel .control-next.control-arrow:before{
+  border-top: 2px solid #fff !important;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+} 
+
+.carousel .control-next.control-arrow:before {
+  border-left: none !important; 
+  border-right: 2px solid #fff !important;
+  margin-right: 2em !important;
+  border-bottom: none !important;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: 2px solid #fff !important;
+  border-left: 2px solid #fff !important;
+  margin-left: 2em !important;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: rgba(0,0,0,0); 
+}
+
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow{
+  opacity: 1;
+}
+
+.showcase-content{
+  position: absolute;
+  bottom: 5em;
+  left: 3em;
+  color: #fff;
+}
+
+/**   **/
