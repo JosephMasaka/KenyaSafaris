@@ -5,7 +5,7 @@ function Navbar({openSidebar}) {
     <div id='Navbar' className='navbar'>
         <div className='flex flex-row container'>
             <div className='logo'>
-                <h2 id='logo'>Safari's</h2>
+                <h2 id='logo'>Aqua<span className='color-primary'>Fanatics</span></h2>
             </div>
             <div className='ham-menu' onClick={openSidebar}>
                 <div>

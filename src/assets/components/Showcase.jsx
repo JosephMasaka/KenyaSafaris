@@ -1,32 +1,30 @@
-import React from 'react'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Carousel } from 'react-responsive-carousel'
-import Wildlife from '../img/wildlife.mp4'
-import Lion from '../img/lion.jpg'
-import Rhino from '../img/rhino.jpg'
+function Showcase(){
 
-function Showcase() {
-  return (
-    <div id='showArea'>
-        <Carousel infiniteLoop interval={6000}>
-            <div className='custom-slide slide-1'>
-                <video id='wildlife' autoPlay loop muted>
-                    <source src={Wildlife} type='video/mp4'/>
-                </video>
-                <div className='showcase-content flex flex-row'>
-                    <div className='color-secondary'></div>
-                    <h1>Wildlife</h1>
-                </div>
-            </div>
-            <div className='custom-slide slide-1'>
-                <img src={Lion} alt="lion" />
-            </div>
-            <div className='custom-slide slide-1'>
-                <img src={Rhino} alt="rhino" />
-            </div>
-        </Carousel>
+return(
+<div class="perspective">
+
+  <label class="tab tab-2" for="tab-top">TOP</label>
+  <label class="tab tab-1" for="tab-front">FRONT</label>
+  <label class="tab tab-3" for="tab-bottom">BOTTOM</label>
+  <input type="radio" name="tabs" id="tab-top"/>
+  <input type="radio" name="tabs" id="tab-front"/>
+  <input type="radio" name="tabs" id="tab-bottom"/> 
+
+  <div class="cube">
+    <div class="tab-content tab-content-2">
+      <h1>TOP CONTENT</h1>
+      <p>THIS IS AWESOME</p>
     </div>
-  )
-}
+     <div class="tab-content tab-content-1">
+      <h1>FRONT CONTENT</h1>
+      <p>THIS IS COOL</p>
+    </div>
+    <div class="tab-content tab-content-3">
+      <h1>BOTTOM CONTENT</h1>
+      <p>THIS IS SWEET</p>
+    </div>
+  </div>
+</div>
+)}
 
 export default Showcase

@@ -1,0 +1,58 @@
+.landing-area{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    scroll-snap-align: center;
+}
+
+.overlay{
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, .7);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+video{
+    position: fixed;
+    width: 100%;
+    z-index: -10;
+}
+
+.landing-content{
+    position: absolute;
+    top: 60%;
+    margin: auto;
+    color: #fff;
+}
+
+.landing-content h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url(/src/assets/img/pattern.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    font-size: 55px;
+    margin: auto;
+    width: 70%;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.landing-content .flex{
+    width: 70%;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.landing-content .flex button{
+    cursor: pointer;
+    padding: 15px 35px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #fff;
+    margin-right: 3em;
+    border: 2px solid #fff;
+}
