@@ -6,6 +6,7 @@
     background: linear-gradient(110deg, rgba(0, 0, 0, .8) 70%, rgba(255, 255, 255, .8) 30%), url('../img/homeFish.jpg');
     margin-top: -5.5%;
     background-position: 0% 100%;
+    background-attachment: fixed;
 }
 
 .fish-cards{

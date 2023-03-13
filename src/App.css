@@ -30,6 +30,10 @@ html{
   scroll-snap-type: y mandatory;
 }
 
+button{
+  cursor: pointer;
+}
+
 .flex{
   display: flex;
 }
