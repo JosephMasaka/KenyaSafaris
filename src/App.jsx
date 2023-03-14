@@ -9,6 +9,8 @@ import FishTypes from './assets/components/FishTypes'
 import FeaturedAquariums from './assets/components/FetauredAquariums'
 import IntroPonics from './assets/components/IntroPonics'
 import AquaLab from './assets/components/AquaLab'
+import Newsletter from './assets/components/Newsletter'
+import Footer from './assets/components/Footer'
 
 
 
@@ -27,6 +29,8 @@ function App() {
         <FishTypes />
         <FeaturedAquariums />
         <AquaLab />
+        <Newsletter />
+        <Footer />
       </div>
     </div>
   );
