@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
 import './App.css'
 import Navbar from './assets/components/Navbar'
 import Showcase from './assets/components/Showcase'
@@ -19,20 +20,24 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   return (
-    <div className="App">
-      <Navbar openSidebar={() => {setIsSidebarOpen(true)}}/>
-      <Sidebar isSidebarOpen={isSidebarOpen} closeMenu={() => {setIsSidebarOpen(false)}}/>
-      <div className='scroll-snap-align'>
-        <Landing />
-        <IntroAqua />
-        <IntroPonics />
-        <FishTypes />
-        <FeaturedAquariums />
-        <AquaLab />
-        <Newsletter />
-        <Footer />
+    <Router>
+      <div className="App">
+        <Navbar openSidebar={() => {setIsSidebarOpen(true)}}/>
+        <Sidebar isSidebarOpen={isSidebarOpen} closeMenu={() => {setIsSidebarOpen(false)}}/>
+        <div className='scroll-snap-align'>
+          <Switch>
+            <Landing />
+            <IntroAqua />
+            <IntroPonics />
+            <FishTypes />
+            <FeaturedAquariums />
+            <AquaLab />
+            <Newsletter />
+            <Footer />
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
